@@ -20,8 +20,13 @@
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
  */
-function Rectangle(/* width, height */) {
-  throw new Error('Not implemented');
+function Rectangle(width, height) {
+  this.width = width;
+  this.height = height;
+
+  this.getArea = function () {
+    return this.width * this.height;
+  };
 }
 
 
@@ -35,8 +40,8 @@ function Rectangle(/* width, height */) {
  *    [1,2,3]   =>  '[1,2,3]'
  *    { width: 10, height : 20 } => '{"height":10,"width":20}'
  */
-function getJSON(/* obj */) {
-  throw new Error('Not implemented');
+function getJSON(obj) {
+  return JSON.stringify(obj);
 }
 
 
@@ -111,31 +116,60 @@ function fromJSON(/* proto, json */) {
  */
 
 const cssSelectorBuilder = {
+  // result: '',
   element(/* value */) {
+    // this.result += value;
+    // return this;
     throw new Error('Not implemented');
   },
 
   id(/* value */) {
+    // this.result += `#${value}`;
+    // return this;
     throw new Error('Not implemented');
   },
 
   class(/* value */) {
+    // this.result += `.${value}`;
+    // return this;
     throw new Error('Not implemented');
   },
 
   attr(/* value */) {
+    // this.result += `[${value}]`;
+    // return this;
     throw new Error('Not implemented');
   },
 
   pseudoClass(/* value */) {
+    // this.result += `:${value}`;
+    // return this;
     throw new Error('Not implemented');
   },
 
   pseudoElement(/* value */) {
+    // this.result += `::${value}`;
+    // return this;
     throw new Error('Not implemented');
   },
 
   combine(/* selector1, combinator, selector2 */) {
+    // console.log(this.result);
+    // const first = new cssSelectorBuilder;
+    // console.log(`selector1 = ${selector1.result}`);
+    // this.result = '';
+    // const second = selector2.result;
+    // console.log(`selector2 = ${selector2.result}`);
+    // this.result = '';
+
+    // this.result += `${first} ${combinator} ${second}`;
+    // return this;
+    throw new Error('Not implemented');
+  },
+  stringify() {
+    // const temp = this.result;
+    // this.result = '';
+    // return temp;
     throw new Error('Not implemented');
   },
 };
